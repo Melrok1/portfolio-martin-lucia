@@ -1,6 +1,7 @@
 <template>
   <div class="lucka-page-wrapper">
     <h1>Lucka</h1>
+		<div></div>
   </div>
 </template>
 
