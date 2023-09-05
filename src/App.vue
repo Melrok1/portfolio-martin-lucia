@@ -1,16 +1,25 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/lucka">Lucka</router-link>
-  </nav>
-  <router-view/>
+  <DesktopNavigation />
+  <router-view />
 </template>
 
 
 
 
 
+<script lang="ts">
+import { defineComponent } from "vue";
+import DesktopNavigation from "./components/Navigation/DesktopNavigation.vue";
+
+export default defineComponent({
+  components: {
+    DesktopNavigation,
+  },
+  // setup() {
+
+  // },
+});
+</script>
 
 
 
@@ -21,7 +30,9 @@
 
 
 <style lang="scss">
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,18 +46,5 @@
   color: #4f94d8;
   background: #292929;
   min-height: 100vh;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
