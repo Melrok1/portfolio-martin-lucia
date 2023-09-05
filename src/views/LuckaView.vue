@@ -1,8 +1,8 @@
 <template>
-    <div class="lucka-page-wrapper">
-        <h1>Lucka</h1>
-
-    </div>
+  <div class="lucka-page-wrapper">
+    <h1>Lucka</h1>
+		<div></div>
+  </div>
 </template>
 
 
@@ -16,7 +16,4 @@ export default {
 
 
 <style lang="sass" scoped>
-
-
-
 </style>
