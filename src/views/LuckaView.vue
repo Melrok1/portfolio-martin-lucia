@@ -4,7 +4,7 @@
     <button @click="changeName('Tarffffffa')">Change name</button>
     <button @click="changeAge(250000)">Change age</button>
   </div>
-</template>
+</template> 
 
 
 <script lang="ts">
