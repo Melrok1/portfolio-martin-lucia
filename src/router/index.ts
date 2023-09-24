@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import LuckaView from '../views/LuckaView.vue'
 import AboutView from '../views/AboutView.vue'
 import HomeView from '../views/HomeView.vue'
+import ProjectView from '../views/ProjectsView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/lucka',
     name: 'lucka',
     component: LuckaView
+  }, 
+  {
+    path: '/projects',
+    name: 'projects',
+    component: ProjectView
   }
 ]
 
