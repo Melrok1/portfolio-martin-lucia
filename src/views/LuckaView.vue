@@ -1,57 +1,44 @@
 <template>
+    <div class="app">
+        <div class="change">
+            <p>{{ name }} - {{ age }}</p>
+            <button @click="changeName('Tarffffffa')">Change name</button>
+            <button @click="changeAge(250000)">Change age</button>
+        </div>
 
-  <div class="app">
-    <div class="change">
-      <p>{{ name }} - {{ age }}</p>
-      <button @click="changeName('Tarffffffa')">Change name</button>
-      <button @click="changeAge(250000)">Change age</button>
+        <TodoList />
     </div>
-
-    <TodoList/>
-  </div>
-</template> 
-
+</template>
 
 <script lang="ts">
+    import { defineComponent, ref } from 'vue';
+    import TodoList from '@/components/SmallProjects/TodoListLucia/TodoList.vue';
 
-import { defineComponent, ref } from "vue";
-import TodoList from "./TodoList.vue";
-
-export default defineComponent({
-  name: "LuckaView",
-  components: {
-    TodoList,
-  },
- setup() {
-  const name = ref('Link')
-  const age = ref<number | string>(35)
-
-  return {name, age}
- },
-
-  methods: {
-    changeName(name: string) {
-      this.name = name
-      return name
-    },
-
-        return { name, age };
-    },
-
-    methods: {
-        changeName(name: string) {
-            this.name = name;
-            return name;
+    export default defineComponent({
+        name: 'LuckaView',
+        components: {
+            TodoList
         },
 
-        changeAge(age: string | number) {
-            this.age = age;
-            return age;
+        setup() {
+            const name = ref('Link');
+            const age = ref<number | string>(35);
+
+            return { name, age };
+        },
+
+        methods: {
+            changeName(name: string) {
+                this.name = name;
+                return name;
+            },
+
+            changeAge(age: string | number) {
+                this.age = age;
+                return age;
+            }
         }
-    }
-});
+    });
 </script>
 
-
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
