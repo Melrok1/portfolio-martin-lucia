@@ -1,21 +1,39 @@
 <template>
-    <div class="app">
-        <p>{{ name }} - {{ age }}</p>
-        <button @click="changeName('Tarffffffa')">Change name</button>
-        <button @click="changeAge(250000)">Change age</button>
+
+  <div class="app">
+    <div class="change">
+      <p>{{ name }} - {{ age }}</p>
+      <button @click="changeName('Tarffffffa')">Change name</button>
+      <button @click="changeAge(250000)">Change age</button>
     </div>
+
+    <TodoList/>
+  </div>
 </template> 
 
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+
+import { defineComponent, ref } from "vue";
+import TodoList from "./TodoList.vue";
 
 export default defineComponent({
-    name: 'LuckaView',
-    components: {},
-    setup() {
-        const name = ref('Link');
-        const age = ref<number | string>(35);
+  name: "LuckaView",
+  components: {
+    TodoList,
+  },
+ setup() {
+  const name = ref('Link')
+  const age = ref<number | string>(35)
+
+  return {name, age}
+ },
+
+  methods: {
+    changeName(name: string) {
+      this.name = name
+      return name
+    },
 
         return { name, age };
     },
@@ -35,5 +53,5 @@ export default defineComponent({
 </script>
 
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 </style>
