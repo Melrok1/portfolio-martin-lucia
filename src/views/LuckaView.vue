@@ -1,4 +1,5 @@
 <template>
+
   <div class="app">
     <div class="change">
       <p>{{ name }} - {{ age }}</p>
@@ -12,6 +13,7 @@
 
 
 <script lang="ts">
+
 import { defineComponent, ref } from "vue";
 import TodoList from "./TodoList.vue";
 
@@ -33,11 +35,20 @@ export default defineComponent({
       return name
     },
 
-    changeAge(age: string | number) {
-      this.age = age
-      return age
+        return { name, age };
     },
-  },
+
+    methods: {
+        changeName(name: string) {
+            this.name = name;
+            return name;
+        },
+
+        changeAge(age: string | number) {
+            this.age = age;
+            return age;
+        }
+    }
 });
 </script>
 
