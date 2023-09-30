@@ -3,6 +3,7 @@ import LuckaView from '../views/LuckaView.vue';
 import AboutView from '../views/AboutView.vue';
 import HomeView from '../views/HomeView.vue';
 import ProjectView from '../views/ProjectsView.vue';
+import ProjectDetail from '../components/SmallProjects/ProjectDetail.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -23,7 +24,14 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/projects',
         name: 'projects',
-        component: ProjectView
+        component: ProjectView,
+        children: [
+            {
+                path: ':id',
+                component: ProjectDetail,
+                props: true
+            }
+        ]
     }
 ];
 
